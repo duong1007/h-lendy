@@ -1,3 +1,24 @@
+body {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.col-custom {
+    flex: 0 0 auto;
+    width: 3.5%;
+}
+
+.col-custom-2 {
+    flex: 0 0 auto;
+    width: 18%;
+}
+
 .nav-input {
     border: 0;
     border-bottom: 1px black;
@@ -5,11 +26,12 @@
     background: transparent;
     color: white;
 }
+
 .navbar-label {
     border-bottom: 2px solid #999;
 }
 
-body {
+.body-background {
     background: url("../image/navbar-background.png") no-repeat;
     background-size: 100%;
 }
@@ -23,12 +45,12 @@ body {
     margin-left: 13rem;
 }
 
-nav {
+.bg-black {
     background: black;
 }
 
 .nav-li:focus, .nav-li:hover, .nav-li.active {
-    text-decoration: #C75000 underline solid ;
+    text-decoration: #C75000 underline solid;
     text-decoration-thickness: 4px;
 }
 
@@ -37,7 +59,7 @@ nav {
 }
 
 .nav-collapse {
-    background: #C75000 ;
+    background: #C75000;
     color: white;
 }
 
@@ -53,18 +75,24 @@ form span {
 }
 
 /*carousel*/
-.card {
+.carousel-inner .card {
     background: #C75000;
     border: 0 !important;
 }
 
-.card img {
+.carousel-inner .card img {
     padding: 0 16px;
 }
+
+#myCollapse a:hover {
+    color: white;
+}
+
 @media (max-width: 767px) {
     .carousel-inner .carousel-item > div {
         display: none;
     }
+
     .carousel-inner .carousel-item > div:first-child {
         display: block;
     }
@@ -93,4 +121,325 @@ form span {
 .carousel-inner .carousel-item-end,
 .carousel-inner .carousel-item-start {
     transform: translateX(0);
+}
+
+.main-banner {
+    text-align: center;
+    color: white;
+    background: black;
+}
+
+.main-banner h1 {
+    margin: 4% 0 2% 0;
+}
+
+/*---------------------
+  Breadcrumb
+-----------------------*/
+
+.breadcrumb__links {
+    background: #C75000;
+    color: white;
+    font-size: 20px;
+    padding: 10px 0 10px 3rem;
+}
+
+.breadcrumb__links a {
+    display: inline-block;
+}
+
+.breadcrumb__links a {
+    text-decoration: none;
+    color: white;
+}
+
+.breadcrumb__links span {
+    display: inline-block;
+}
+
+.room-menu {
+    background: black;
+    color: white;
+    padding: 4rem 0;
+    font-size: 20px;
+}
+
+.room-menu a {
+    color: #cfcece;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.room-menu a.active, .room-menu a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.room-page {
+    padding: 0 4rem;
+}
+
+.room-page a:active {
+    color: white;
+}
+
+.category {
+    position: relative;
+    display: inline;
+}
+
+.category img {
+    width: 100%;
+}
+
+.category .img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 12px;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: -webkit-filter 0.2s linear;
+}
+
+.category:hover .img-top {
+    visibility: hidden;
+    opacity: 0;
+    filter: brightness(50%);
+    transition: visibility 0s 0.2s, opacity 0.2s linear;
+}
+
+.category-main-title {
+    font-weight: bolder;
+    width: 200%;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.category-sub-title {
+    width: 200%;
+    color: black;
+    font-size: 13px;
+}
+
+.category-title {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    padding-left: 10px;
+    visibility: hidden;
+}
+
+.category:hover .category-title, .category a:focus .category-title {
+    visibility: visible;
+}
+
+.category a:focus img {
+    border: 5px #C75000 solid;
+}
+
+.category a:focus .img-top {
+    visibility: hidden;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+    padding: 26px 0;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.side-menu {
+    border-bottom: 2px white solid;
+}
+
+.product-category {
+    padding-left: 4rem;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+}
+
+/* Optional: Style the caret down icon */
+.dropdown-icon {
+    float: right;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+table {
+    border: none black !important;
+}
+
+.w-95 {
+    width: 93%;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+.card-text {
+    color: gray;
+    font-size: 20px;
+}
+
+.price {
+    color: #C75000;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.discount {
+    font-size: 20px;
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    background: #C75000;
+    border-radius: 0;
+}
+
+.discount-price {
+    font-size: 20px;
+    color: gray;
+    font-weight: bold;
+    text-decoration-line: line-through !important;
+    text-decoration: gray;
+}
+
+.td-product {
+    padding-right: 12px !important;
+    color: white;
+    padding-top: 0;
+    position: relative;
+}
+
+.td-product:hover .product-icon {
+    right: 11%;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+}
+
+.product-icon {
+    position: absolute;
+    right: 7%;
+    bottom: 5%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.product-icon button {
+    border: 0;
+    background: none;
+    color: white;
+}
+
+.product-icon button span {
+    font-size: 40px !important;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: all 0.5s;
+}
+
+.rotate-revert {
+    transform: rotate(0deg);
+    transition: all 1s;
+}
+
+.inputGroup {
+    overflow: hidden;
+    background-color: black;
+    display: block;
+    font-size: 20px;
+    position: relative;
+    color: white;
+}
+.inputGroup label {
+    padding: 0 0 1.5rem 1rem;
+    width: 100%;
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.inputGroup label:after {
+    width: 32px;
+    height: 32px;
+    content: "";
+    border: 2px solid white;
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+    background-repeat: no-repeat;
+    background-position: 2px 3px;
+    border-radius: 50%;
+    z-index: 2;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+.inputGroup input:checked ~ label {
+    color: white;
+}
+.inputGroup input:checked ~ label:before {
+    transform: translate(-50%, -50%) scale3d(56, 56, 1);
+    opacity: 1;
+}
+.inputGroup input:checked ~ label:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23000' fill-rule='nonzero'/%3E%3C/svg%3E ");
+}
+.inputGroup input {
+    width: 32px;
+    height: 32px;
+    order: 1;
+    position: absolute;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.ui-slider .ui-btn-inner {
+    padding: 4px 0 0 0 !important;
+}
+
+.ui-slider-popup {
+    position: absolute !important;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    font-size: 36px;
+    padding-top: 14px;
+    z-index: 100;
+    opacity: 0.8;
 }
