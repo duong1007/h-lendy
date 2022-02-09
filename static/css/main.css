@@ -1,6 +1,7 @@
 body {
     color: white;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
@@ -25,6 +26,7 @@ body::-webkit-scrollbar {
     outline: 0;
     background: transparent;
     color: white;
+    font-size: 16px;
 }
 
 .navbar-label {
@@ -37,7 +39,6 @@ body::-webkit-scrollbar {
 }
 
 .logo {
-    width: 10%;
     height: auto;
 }
 
@@ -50,12 +51,14 @@ body::-webkit-scrollbar {
 }
 
 .nav-li:focus, .nav-li:hover, .nav-li.active {
-    text-decoration: #C75000 underline solid;
-    text-decoration-thickness: 4px;
+    /*text-decoration: #C75000 underline solid;*/
+    /*text-decoration-thickness: 4px;*/
+    border-bottom: #C75000 4px solid;
 }
 
-.search {
-    text-decoration: #999 underline solid
+.nav-li {
+    padding: 8px 0 0 0 !important;
+    margin: 8px;
 }
 
 .nav-collapse {
@@ -68,10 +71,11 @@ body::-webkit-scrollbar {
     margin-top: 1rem;
 }
 
-form span {
+.search span {
     color: white;
     margin: 0;
     padding: 0;
+    float: right;
 }
 
 /*carousel*/
@@ -127,6 +131,10 @@ form span {
     text-align: center;
     color: white;
     background: black;
+}
+
+.main-banner h1 {
+    font-weight: 900;
 }
 
 .main-banner h1 {
@@ -340,7 +348,7 @@ table {
     position: relative;
 }
 
-.td-product:hover .product-icon {
+.product:hover .product-icon {
     right: 11%;
     opacity: 1;
     visibility: visible;
@@ -429,17 +437,70 @@ table {
     visibility: hidden;
 }
 
-.ui-slider .ui-btn-inner {
-    padding: 4px 0 0 0 !important;
+#slider-range {
+    background: gray;
+    margin-bottom: 1rem;
 }
 
-.ui-slider-popup {
-    position: absolute !important;
-    width: 64px;
-    height: 64px;
+#amount {
+    background: black;
+    border: 0;
+    color: white;
+    margin-bottom: 1rem;
     text-align: center;
-    font-size: 36px;
-    padding-top: 14px;
-    z-index: 100;
-    opacity: 0.8;
+}
+
+.ui-state-active {
+    background: #C75000 !important;
+    border: #b74600 !important;
+}
+
+.dt-more-container {
+    text-align:center;
+    margin:2em 0;
+}
+
+.product-table tr {
+    display:none;
+}
+
+.totop {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+}
+.totop a {
+    display: none;
+}
+
+.totop a:hover {
+    color: #C75000;
+}
+
+.totop span {
+    font-size: 40px;
+}
+
+#loadMore {
+    text-align: center;
+    background-color: #C75000;
+    color: white;
+    position: absolute;
+    padding: 0.5rem 2rem;
+    margin: 2rem;
+    left: 44%;
+    bottom: 20%;
+    transition: all 600ms ease-in-out;
+    -webkit-transition: all 600ms ease-in-out;
+    -moz-transition: all 600ms ease-in-out;
+    -o-transition: all 600ms ease-in-out;
+}
+#loadMore:hover {
+    background-color: white;
+    color: black;
+}
+
+#loadMore span {
+    padding-left: 20px;
+    float: right;
 }

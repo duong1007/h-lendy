@@ -20,6 +20,8 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
 </head>
 <body>
 
@@ -29,7 +31,7 @@
             <div class="col-12 p-0">
                 <nav class="navbar navbar-expand-lg navbar-dark ps-2 pe-4 bg-black">
                     <!-- ***** Logo Start ***** -->
-                    <img class="navbar-brand logo ms-5 me-5" src="static/image/logo.png" alt="logo">
+                    <a href="#"><img class="navbar-brand logo ms-5 me-5" src="static/image/logo.png" alt="logo"></a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -37,7 +39,7 @@
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse ms-10" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                             <li class="nav-item">
                                 <a class="nav-link nav-li" href="#">HOME</a>
@@ -54,14 +56,14 @@
                                 <a class="nav-link nav-li " href="#">COLLECTION</a>
                             </li>
                         </ul>
-                        <form class="d-flex">
-                            <label for="navbar-input" class="navbar-label">
-                                <input class="nav-input" placeholder="Search"
+                        <form class="d-flex search">
+                            <label for="navbar-input" class="navbar-label me-2">
+                                <input class="nav-input me-1" placeholder="Search"
                                        id="navbar-input">
+                                <span class="material-icons">search</span>
                             </label>
-                            <span class="material-icons search">search</span>
-                            <span class="material-icons">favorite_border</span>
-                            <span class="material-icons">shopping_cart</span>
+                            <span class="material-icons me-2">favorite_border</span>
+                            <span class="material-icons me-2">shopping_cart</span>
                         </form>
                     </div>
                     <!-- ***** Menu End ***** -->
@@ -249,7 +251,7 @@
 <!-- Menu Begin -->
 <div class="container-fluid">
     <div class="row room-menu">
-        <div class="col-2 room-page mt-2">
+        <div class="col-2 room-page">
             <p>
                 <a href="#" class="active">Living Room</a>
             </p>
@@ -336,7 +338,7 @@
 
 <!-- Product Begin -->
 <div class="container-fluid bg-black">
-    <div class="row pt-5">
+    <div class="row pt-5 pb-5">
         <div class="col-2 product-category">
             <div class="sidenav">
                 <div class="side-menu">
@@ -403,20 +405,17 @@
                     </span>
                     </a>
                     <div class="collapse" id="prices">
+                        <div id="slider-range"></div>
                         <form>
-                            <div data-role="rangeslider">
-                                <label for="range-1a">Rangeslider:</label>
-                                <input type="range" name="range-1a" id="range-1a" min="0" max="100" value="40" data-popup-enabled="true" data-show-value="true">
-                                <label for="range-1b">Rangeslider:</label>
-                                <input type="range" name="range-1b" id="range-1b" min="0" max="100" value="80" data-popup-enabled="true" data-show-value="true">
-                            </div>
+                            <label for="amount"></label>
+                            <input type="text" id="amount" readonly disabled>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-10">
-            <table class="table ms-5">
+            <table class="table ms-5 product-table">
                 <tr>
                     <td class="td-product">
                         <div class="w-95 mb-5 product">
@@ -428,11 +427,12 @@
                                 <p class="card-text">Code: 12345</p>
                                 <p class="price">$1200  <span class="discount-price">$1200</span></p>
                             </div>
-                        </div>
-                        <div class="product-icon">
-                            <button><span class="material-icons">favorite_border</span></button>
-                            <br><br><br><br><br><br>
-                            <button><span class="material-icons">add_shopping_cart</span></button>
+
+                            <div class="product-icon">
+                                <button><span class="material-icons">favorite_border</span></button>
+                                <br><br><br><br><br><br>
+                                <button><span class="material-icons">add_shopping_cart</span></button>
+                            </div>
                         </div>
                     </td>
                     <td class="td-product">
@@ -443,15 +443,206 @@
                                 <p class="card-text">Code: 12345</p>
                                 <p class="price">$1200</p>
                             </div>
+
+                            <div class="product-icon">
+                                <button><span class="material-icons">favorite_border</span></button>
+                                <br><br><br><br><br><br>
+                                <button><span class="material-icons">add_shopping_cart</span></button>
+                            </div>
                         </div>
-                        <div class="product-icon">
-                            <button><span class="material-icons">favorite_border</span></button>
-                            <br><br><br><br><br><br>
-                            <button><span class="material-icons">add_shopping_cart</span></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-product">
+                        <div class="w-95 mb-5 product">
+                            <img src="static/image/sofa-1.png" class="card-img-top" alt="...">
+                            <span class="badge discount">-25%</span>
+
+                            <div class="mt-3">
+                                <h5 class="card-title">MODENA 2,5 SEATER</h5>
+                                <p class="card-text">Code: 12345</p>
+                                <p class="price">$1200  <span class="discount-price">$1200</span></p>
+                            </div>
+
+                            <div class="product-icon">
+                                <button><span class="material-icons">favorite_border</span></button>
+                                <br><br><br><br><br><br>
+                                <button><span class="material-icons">add_shopping_cart</span></button>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="td-product">
+                        <div class="w-95 mb-5 product">
+                            <img src="static/image/sofa-1.png" class="card-img-top" alt="...">
+                            <div class="mt-3">
+                                <h5 class="card-title">MODENA 2,5 SEATER</h5>
+                                <p class="card-text">Code: 12345</p>
+                                <p class="price">$1200</p>
+                            </div>
+
+                            <div class="product-icon">
+                                <button><span class="material-icons">favorite_border</span></button>
+                                <br><br><br><br><br><br>
+                                <button><span class="material-icons">add_shopping_cart</span></button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-product">
+                        <div class="w-95 mb-5 product">
+                            <img src="static/image/sofa-1.png" class="card-img-top" alt="...">
+                            <span class="badge discount">-25%</span>
+
+                            <div class="mt-3">
+                                <h5 class="card-title">MODENA 2,5 SEATER</h5>
+                                <p class="card-text">Code: 12345</p>
+                                <p class="price">$1200  <span class="discount-price">$1200</span></p>
+                            </div>
+
+                            <div class="product-icon">
+                                <button><span class="material-icons">favorite_border</span></button>
+                                <br><br><br><br><br><br>
+                                <button><span class="material-icons">add_shopping_cart</span></button>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="td-product">
+                        <div class="w-95 mb-5 product">
+                            <img src="static/image/sofa-1.png" class="card-img-top" alt="...">
+                            <div class="mt-3">
+                                <h5 class="card-title">MODENA 2,5 SEATER</h5>
+                                <p class="card-text">Code: 12345</p>
+                                <p class="price">$1200</p>
+                            </div>
+
+                            <div class="product-icon">
+                                <button><span class="material-icons">favorite_border</span></button>
+                                <br><br><br><br><br><br>
+                                <button><span class="material-icons">add_shopping_cart</span></button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-product">
+                        <div class="w-95 mb-5 product">
+                            <img src="static/image/sofa-1.png" class="card-img-top" alt="...">
+                            <span class="badge discount">-25%</span>
+
+                            <div class="mt-3">
+                                <h5 class="card-title">MODENA 2,5 SEATER</h5>
+                                <p class="card-text">Code: 12345</p>
+                                <p class="price">$1200  <span class="discount-price">$1200</span></p>
+                            </div>
+
+                            <div class="product-icon">
+                                <button><span class="material-icons">favorite_border</span></button>
+                                <br><br><br><br><br><br>
+                                <button><span class="material-icons">add_shopping_cart</span></button>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="td-product">
+                        <div class="w-95 mb-5 product">
+                            <img src="static/image/sofa-1.png" class="card-img-top" alt="...">
+                            <div class="mt-3">
+                                <h5 class="card-title">MODENA 2,5 SEATER</h5>
+                                <p class="card-text">Code: 12345</p>
+                                <p class="price">$1200</p>
+                            </div>
+
+                            <div class="product-icon">
+                                <button><span class="material-icons">favorite_border</span></button>
+                                <br><br><br><br><br><br>
+                                <button><span class="material-icons">add_shopping_cart</span></button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-product">
+                        <div class="w-95 mb-5 product">
+                            <img src="static/image/sofa-1.png" class="card-img-top" alt="...">
+                            <span class="badge discount">-25%</span>
+
+                            <div class="mt-3">
+                                <h5 class="card-title">MODENA 2,5 SEATER</h5>
+                                <p class="card-text">Code: 12345</p>
+                                <p class="price">$1200  <span class="discount-price">$1200</span></p>
+                            </div>
+
+                            <div class="product-icon">
+                                <button><span class="material-icons">favorite_border</span></button>
+                                <br><br><br><br><br><br>
+                                <button><span class="material-icons">add_shopping_cart</span></button>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="td-product">
+                        <div class="w-95 mb-5 product">
+                            <img src="static/image/sofa-1.png" class="card-img-top" alt="...">
+                            <div class="mt-3">
+                                <h5 class="card-title">MODENA 2,5 SEATER</h5>
+                                <p class="card-text">Code: 12345</p>
+                                <p class="price">$1200</p>
+                            </div>
+
+                            <div class="product-icon">
+                                <button><span class="material-icons">favorite_border</span></button>
+                                <br><br><br><br><br><br>
+                                <button><span class="material-icons">add_shopping_cart</span></button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-product">
+                        <div class="w-95 mb-5 product">
+                            <img src="static/image/sofa-1.png" class="card-img-top" alt="...">
+                            <span class="badge discount">-25%</span>
+
+                            <div class="mt-3">
+                                <h5 class="card-title">MODENA 2,5 SEATER</h5>
+                                <p class="card-text">Code: 12345</p>
+                                <p class="price">$1200  <span class="discount-price">$1200</span></p>
+                            </div>
+
+                            <div class="product-icon">
+                                <button><span class="material-icons">favorite_border</span></button>
+                                <br><br><br><br><br><br>
+                                <button><span class="material-icons">add_shopping_cart</span></button>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="td-product">
+                        <div class="w-95 mb-5 product">
+                            <img src="static/image/sofa-1.png" class="card-img-top" alt="...">
+                            <div class="mt-3">
+                                <h5 class="card-title">MODENA 2,5 SEATER</h5>
+                                <p class="card-text">Code: 12345</p>
+                                <p class="price">$1200</p>
+                            </div>
+
+                            <div class="product-icon">
+                                <button><span class="material-icons">favorite_border</span></button>
+                                <br><br><br><br><br><br>
+                                <button><span class="material-icons">add_shopping_cart</span></button>
+                            </div>
                         </div>
                     </td>
                 </tr>
             </table>
+            <p class="totop">
+                <a href="#top">
+                    <span class="material-icons">arrow_circle_up</span>
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 offset-2 position-relative">
+            <a href="#" id="loadMore">View More <span class="material-icons">visibility</span></a>
         </div>
     </div>
 </div>
@@ -462,6 +653,8 @@
 
 <!-- jQuery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 
 <!-- Global Init -->
 <script src="static/js/main.js"></script>

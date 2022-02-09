@@ -41,3 +41,37 @@ function rotate(data) {
         }, 0
     )
 }
+// range slider
+$( function() {
+    $( "#slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: 5000,
+        values: [ 750, 3000 ],
+        slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+} );
+
+//load-more
+$(function () {
+    $("tr").slice(0, 3).show();
+    $("#loadMore").on('click', function (e) {
+        e.preventDefault();
+        $("tr:hidden").slice(0, 2).slideDown();
+        if ($("tr:hidden").length == 0) {
+            $("#load").fadeOut('slow');
+        }
+    });
+});
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 500) {
+        $('.totop a').fadeIn();
+    } else {
+        $('.totop a').fadeOut();
+    }
+});

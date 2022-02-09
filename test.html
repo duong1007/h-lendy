@@ -1,427 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="static/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Slider - Range slider</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <style>
         body {
-            color: white;
-            font-family: 'Montserrat', sans-serif;
+            background-color: #f6f6f6;
+            width: 400px;
+            margin: 20px auto;
+            font: normal 13px/100% sans-serif;
+            color: #444;
         }
-
-        .nav-input {
-            border: 0;
-            border-bottom: 1px black;
-            outline: 0;
-            background: transparent;
-            color: white;
+        div {
+            display:none;
+            padding: 10px;
+            border-width: 0 1px 1px 0;
+            border-style: solid;
+            border-color: #fff;
+            box-shadow: 0 1px 1px #ccc;
+            margin-bottom: 5px;
+            background-color: #f1f1f1;
         }
-        .navbar-label {
-            border-bottom: 2px solid #999;
+        .totop {
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
         }
-
-        .body-background {
-            background: url("../image/navbar-background.png") no-repeat;
-            background-size: 100%;
-        }
-
-        .logo {
-            width: 10%;
-            height: auto;
-        }
-
-        .ms-10 {
-            margin-left: 13rem;
-        }
-
-        .bg-black {
-            background: black;
-        }
-
-        .nav-li:focus, .nav-li:hover, .nav-li.active {
-            text-decoration: #C75000 underline solid ;
-            text-decoration-thickness: 4px;
-        }
-
-        .search {
-            text-decoration: #999 underline solid
-        }
-
-        .nav-collapse {
-            background: #C75000 ;
-            color: white;
-        }
-
-        .nav-collapse img {
-            width: 100%;
-            margin-top: 1rem;
-        }
-
-        form span {
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-
-        /*carousel*/
-        .card {
-            background: #C75000;
-            border: 0 !important;
-        }
-
-        .card img {
-            padding: 0 16px;
-        }
-
-        @media (max-width: 767px) {
-            .carousel-inner .carousel-item > div {
-                display: none;
-            }
-            .carousel-inner .carousel-item > div:first-child {
-                display: block;
-            }
-        }
-
-        .carousel-inner .carousel-item.active,
-        .carousel-inner .carousel-item-next,
-        .carousel-inner .carousel-item-prev {
-            display: flex;
-        }
-
-        /* medium and up screens */
-        @media (min-width: 768px) {
-
-            .carousel-inner .carousel-item-end.active,
-            .carousel-inner .carousel-item-next {
-                transform: translateX(25%);
-            }
-
-            .carousel-inner .carousel-item-start.active,
-            .carousel-inner .carousel-item-prev {
-                transform: translateX(-25%);
-            }
-        }
-
-        .carousel-inner .carousel-item-end,
-        .carousel-inner .carousel-item-start {
-            transform: translateX(0);
-        }
-
-        .main-banner {
-            text-align: center;
-            color: white;
-            background: black;
-        }
-        .main-banner h1 {
-            margin: 4% 0 2% 0;
-        }
-
-        /*---------------------
-          Breadcrumb
-        -----------------------*/
-
-        .breadcrumb__links {
-            background: #C75000;
-            color: white;
-            font-size: 20px;
-            padding: 10px 0 10px 3rem;
-        }
-        .breadcrumb__links a {
-            display: inline-block;
-        }
-        .breadcrumb__links a {
-            text-decoration: none;
-            color: white;
-        }
-
-        .breadcrumb__links span {
-            display: inline-block;
-        }
-
-        .room-menu {
-            background: black;
-            color: white;
-            padding: 2rem 0;
-        }
-
-        .room-menu a {
-            text-decoration: none;
-            color: #cfcece;
-        }
-
-        .room-menu a.active,.room-menu a:hover {
-            text-decoration: underline;
-            color: white;
-        }
-
-        .room-page {
-            padding: 0 3rem;
-        }
-
-        .room-page a:active {
-            color: white;
-        }
-
-        .category {
-            position: relative;
-            display: inline;
-        }
-
-        .category img {
-            width: 94.5%;
-        }
-
-        .category .img-top {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 95%;
-            padding: 0 12px;
-            visibility: visible;
-            opacity: 1;
-            -webkit-transition : -webkit-filter 0.2s linear;
-        }
-        .category:hover .img-top {
-            visibility: hidden;
-            opacity: 0;
-            filter: brightness(50%);
-            transition: visibility 0s 0.2s, opacity 0.2s linear;
-        }
-
-        .category-main-title {
-            font-weight: bolder;
-            width: 200%;
-            color: black;
-            font-size: 20px;
-            margin-bottom: 0;
-            margin-top: 5px;
-        }
-
-        .category-sub-title {
-            width: 200%;
-            color: black;
-            font-size: 13px;
-        }
-
-        .category-title {
-            position: absolute;
-            text-align: center;
-            left: 0;
-            padding-left: 10px;
-            visibility: hidden;
-        }
-
-        .category:hover .category-title, .category a:focus .category-title {
-            visibility: visible;
-        }
-
-        .category a:focus img {
-            border: 5px #C75000 solid;
-        }
-
-        .category a:focus .img-top {
-            visibility: hidden;
-        }
-
-        /* Style the sidenav links and the dropdown button */
-        .sidenav a, .dropdown-btn {
-            padding: 6px 8px 6px 16px;
-            text-decoration: none;
-            font-size: 20px;
-            color: #818181;
-            display: block;
-            border: none;
-            background: none;
-            width: 100%;
-            text-align: left;
-            cursor: pointer;
-            outline: none;
-        }
-
-        /* On mouse-over */
-        .sidenav a:hover, .dropdown-btn:hover {
-            color: #f1f1f1;
-        }
-        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-        .dropdown-container {
+        .totop a {
             display: none;
-            background-color: #262626;
-            padding-left: 8px;
         }
-
-        /* Optional: Style the caret down icon */
-        .dropdown-icon {
-            float: right;
-            padding-right: 8px;
+        a, a:visited {
+            color: #33739E;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
         }
-
-        /* Some media queries for responsiveness */
-        @media screen and (max-height: 450px) {
-            .sidenav {padding-top: 15px;}
-            .sidenav a {font-size: 18px;}
+        a:hover {
+            text-decoration: none;
         }
-
-
+        #loadMore {
+            padding: 10px;
+            text-align: center;
+            background-color: #33739E;
+            color: #fff;
+            border-width: 0 1px 1px 0;
+            border-style: solid;
+            border-color: #fff;
+            box-shadow: 0 1px 1px #ccc;
+            transition: all 600ms ease-in-out;
+            -webkit-transition: all 600ms ease-in-out;
+            -moz-transition: all 600ms ease-in-out;
+            -o-transition: all 600ms ease-in-out;
+        }
+        #loadMore:hover {
+            background-color: #fff;
+            color: #33739E;
+        }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#slider-range" ).slider({
+                range: true,
+                min: 0,
+                max: 500,
+                values: [ 75, 300 ],
+                slide: function( event, ui ) {
+                    $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                }
+            });
+            $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+                " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+        } );
+
+        $(function () {
+            $("div").slice(0, 4).show();
+            $("#loadMore").on('click', function (e) {
+                e.preventDefault();
+                $("div:hidden").slice(0, 4).slideDown();
+                if ($("div:hidden").length == 0) {
+                    $("#load").fadeOut('slow');
+                }
+                $('html,body').animate({
+                    scrollTop: $(this).offset().top
+                }, 1500);
+            });
+        });
+
+        $('a[href=#top]').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 600);
+            return false;
+        });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('.totop a').fadeIn();
+            } else {
+                $('.totop a').fadeOut();
+            }
+        });
+    </script>
 </head>
 <body>
-<div class="container text-center my-3">
-    <h2 class="font-weight-light">Bootstrap Multi Slide Carousel</h2>
-<!--    <div class="row mx-auto my-auto justify-content-center">-->
-<!--        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">-->
-<!--            <div class="carousel-inner" role="listbox">-->
-<!--                <div class="carousel-item active">-->
-<!--                    <div class="col-md-3">-->
-<!--                        <div class="card">-->
-<!--                            <div class="card-img">-->
-<!--                                <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">-->
-<!--                            </div>-->
-<!--                            <div class="card-img-overlay">Slide 1</div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="carousel-item">-->
-<!--                    <div class="col-md-3">-->
-<!--                        <div class="card">-->
-<!--                            <div class="card-img">-->
-<!--                                <img src="//via.placeholder.com/500x400/e66?text=2" class="img-fluid">-->
-<!--                            </div>-->
-<!--                            <div class="card-img-overlay">Slide 2</div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="carousel-item">-->
-<!--                    <div class="col-md-3">-->
-<!--                        <div class="card">-->
-<!--                            <div class="card-img">-->
-<!--                                <img src="//via.placeholder.com/500x400/7d2?text=3" class="img-fluid">-->
-<!--                            </div>-->
-<!--                            <div class="card-img-overlay">Slide 3</div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="carousel-item">-->
-<!--                    <div class="col-md-3">-->
-<!--                        <div class="card">-->
-<!--                            <div class="card-img">-->
-<!--                                <img src="//via.placeholder.com/500x400?text=4" class="img-fluid">-->
-<!--                            </div>-->
-<!--                            <div class="card-img-overlay">Slide 4</div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="carousel-item">-->
-<!--                    <div class="col-md-3">-->
-<!--                        <div class="card">-->
-<!--                            <div class="card-img">-->
-<!--                                <img src="//via.placeholder.com/500x400/aba?text=5" class="img-fluid">-->
-<!--                            </div>-->
-<!--                            <div class="card-img-overlay">Slide 5</div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="carousel-item">-->
-<!--                    <div class="col-md-3">-->
-<!--                        <div class="card">-->
-<!--                            <div class="card-img">-->
-<!--                                <img src="//via.placeholder.com/500x400/fc0?text=6" class="img-fluid">-->
-<!--                            </div>-->
-<!--                            <div class="card-img-overlay">Slide 6</div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">-->
-<!--                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--            </a>-->
-<!--            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">-->
-<!--                <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--            </a>-->
-<!--        </div>-->
-<!--    </div>-->
-    <h5 class="mt-2 fw-light">advances one slide at a time</h5>
-    <div id="carouselInterval" class="carousel slide" data-bs-ride="carousel">
-        <div class="row">
-            <div class="col-1">
-            </div>
-            <div class="col ms-1">
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <img src="static/image/home%20office.png" class="img-fluid">
-                                <div class="card-body">
-                                    <p class="card-title">Home Office</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item ">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <img src="static/image/home%20office.png" class="img-fluid">
-                                <div class="card-body">
-                                    <p class="card-title">Home Office</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <img src="static/image/home%20office.png" class="img-fluid">
-                                <div class="card-body">
-                                    <p class="card-title">Home Office</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <img src="static/image/home%20office.png" class="img-fluid">
-                                <div class="card-body">
-                                    <p class="card-title">Home Office</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-1">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselInterval"
-                data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselInterval"
-                data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</div>
-</body>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script src="static/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    let items = document.querySelectorAll('.carousel .carousel-item')
 
-    items.forEach((el) => {
-        const minPerSlide = 4
-        let next = el.nextElementSibling
-        for (var i=1; i<minPerSlide; i++) {
-            if (!next) {
-                // wrap carousel by using first child
-                next = items[0]
-            }
-            let cloneChild = next.cloneNode(true)
-            el.appendChild(cloneChild.children[0])
-            next = next.nextElementSibling
-        }
-    })
-</script>
+<form>
+    <label for="amount">Price range:</label>
+    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</form>
+
+<div id="slider-range"></div>
+
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+
+
+<a href="#" id="loadMore">Load More</a>
+
+<p class="totop">
+    <a href="#top">Back to top</a>
+</p>
+
+</body>
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </html>
