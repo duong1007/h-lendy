@@ -6,6 +6,18 @@ body {
     scrollbar-width: none; /* Firefox */
 }
 
+.badge-shop {
+    right: 0;
+    bottom: 0;
+    background-color: #C75000;
+    padding: 5% 10% !important;
+    font-size: 10px;
+}
+
+.svg-custom {
+    transform: translateY(-8%);
+}
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -17,7 +29,7 @@ body::-webkit-scrollbar {
 
 .col-custom-2 {
     flex: 0 0 auto;
-    width: 18%;
+    width: 19%;
 }
 
 .nav-input {
@@ -187,7 +199,7 @@ a {
 }
 
 .room-page {
-    padding: 0 4rem;
+    padding: 0 0 0 4rem;
 }
 
 .room-page a:active {
@@ -199,19 +211,31 @@ a {
     display: inline;
 }
 
-.category img {
-    width: 100%;
+.category .img-bottom {
+    width: 103%;
+    border: 5px solid black;
+}
+
+.category a {
+    padding-top: 0;
 }
 
 .category .img-top {
     position: absolute;
+    border: 5px solid black;
     top: 0;
-    left: 0;
+    left: 4px;
     width: 100%;
     padding: 0 12px;
     visibility: visible;
     opacity: 1;
     -webkit-transition: -webkit-filter 0.2s linear;
+}
+
+@media screen and (min-width: 1500px) {
+    .category {
+        width: 20%;
+    }
 }
 
 .category:hover .img-top {
@@ -234,6 +258,7 @@ a {
     width: 200%;
     color: black;
     font-size: 13px;
+    padding-right: 0;
 }
 
 .category-title {
@@ -241,18 +266,19 @@ a {
     text-align: center;
     left: 0;
     padding-left: 10px;
+    padding-right: 0;
     visibility: hidden;
 }
 
-.category:hover .category-title, .category a:focus .category-title {
+.category:hover .category-title, .category .active .category-title {
     visibility: visible;
 }
 
-.category a:focus img {
+.category .active .img-bottom {
     border: 5px #C75000 solid;
 }
 
-.category a:focus .img-top {
+.category .active .img-top {
     visibility: hidden;
 }
 
@@ -272,6 +298,19 @@ a {
 
 .side-menu {
     border-bottom: 2px white solid;
+}
+
+.product img {
+    padding: 4% 2%;
+    background-color: #CCCCCC;
+}
+
+.product {
+    border: 1px black solid;
+}
+
+.product:hover {
+    border-color: white;
 }
 
 .product-category {
@@ -303,8 +342,8 @@ table {
     border: none black !important;
 }
 
-.w-95 {
-    width: 93%;
+.w-custom {
+    width: 98%;
 }
 
 .card-title {
@@ -349,7 +388,7 @@ table {
 }
 
 .product:hover .product-icon {
-    right: 11%;
+    right: 8%;
     opacity: 1;
     visibility: visible;
     transition: all 0.5s;
@@ -357,11 +396,16 @@ table {
 
 .product-icon {
     position: absolute;
-    right: 7%;
+    right: 3%;
     bottom: 5%;
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s;
+}
+
+.add-cart:hover span, .add-cart:hover svg g path {
+    color: #C75000;
+    fill: #C75000;
 }
 
 .product-icon button {
@@ -370,8 +414,17 @@ table {
     color: white;
 }
 
+.span-add {
+    font-size: 15px !important;
+    color: black;
+    background-color: white;
+    position: absolute;
+    bottom: 3px;
+    right: 7px;
+}
+
 .product-icon button span {
-    font-size: 40px !important;
+    font-size: 40px;
 }
 
 .rotate {
@@ -392,6 +445,7 @@ table {
     position: relative;
     color: white;
 }
+
 .inputGroup label {
     padding: 0 0 1.5rem 1rem;
     width: 100%;
@@ -418,16 +472,20 @@ table {
     cursor: pointer;
     transition: all 200ms ease-in;
 }
+
 .inputGroup input:checked ~ label {
     color: white;
 }
+
 .inputGroup input:checked ~ label:before {
     transform: translate(-50%, -50%) scale3d(56, 56, 1);
     opacity: 1;
 }
+
 .inputGroup input:checked ~ label:after {
     background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23000' fill-rule='nonzero'/%3E%3C/svg%3E ");
 }
+
 .inputGroup input {
     width: 32px;
     height: 32px;
@@ -456,19 +514,20 @@ table {
 }
 
 .dt-more-container {
-    text-align:center;
-    margin:2em 0;
+    text-align: center;
+    margin: 2em 0;
 }
 
 .product-table tr {
-    display:none;
+    display: none;
 }
 
 .totop {
     position: fixed;
     bottom: 10px;
-    right: 30px;
+    left: 30px;
 }
+
 .totop a {
     display: none;
 }
@@ -481,7 +540,7 @@ table {
     font-size: 40px;
 }
 
-#loadMore {
+.loadMore {
     text-align: center;
     background-color: #C75000;
     color: white;
@@ -489,18 +548,19 @@ table {
     padding: 0.5rem 2rem;
     margin: 2rem;
     left: 44%;
-    bottom: 20%;
+    bottom: -55px;
     transition: all 600ms ease-in-out;
     -webkit-transition: all 600ms ease-in-out;
     -moz-transition: all 600ms ease-in-out;
     -o-transition: all 600ms ease-in-out;
 }
-#loadMore:hover {
+
+.loadMore:hover {
     background-color: white;
     color: black;
 }
 
-#loadMore span {
+.loadMore span {
     padding-left: 20px;
     float: right;
 }

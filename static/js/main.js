@@ -30,7 +30,6 @@ $('.dropdown-btn').on('click',function(){
 
 function rotate(data) {
     let element = document.getElementById(data)
-    console.log(element.textContent)
     setTimeout(
         function () {
             if(element.textContent.includes('add')) {
@@ -41,6 +40,11 @@ function rotate(data) {
         }, 0
     )
 }
+
+// $(".add-cart").click(function () {
+//     $(".span-add");
+// })
+
 // range slider
 $( function() {
     $( "#slider-range" ).slider({
@@ -58,11 +62,66 @@ $( function() {
 
 //load-more
 $(function () {
-    $("tr").slice(0, 3).show();
-    $("#loadMore").on('click', function (e) {
+    $(".tr-product").slice(0, 3).show();
+    $("#loadMore1").on('click', function (e) {
         e.preventDefault();
-        $("tr:hidden").slice(0, 2).slideDown();
-        if ($("tr:hidden").length == 0) {
+        $(".tr-product:hidden").slice(0, 2).slideDown();
+        if ($(".tr-product:hidden").length == 0) {
+            $("#load").fadeOut('slow');
+        }
+    });
+});
+
+$(function (){
+    $(".tr-coffe").slice(0, 3).show();
+    $("#loadMore2").on('click', function (e) {
+        e.preventDefault();
+        $(".tr-coffe:hidden").slice(0, 2).slideDown();
+        if ($(".tr-coffe:hidden").length == 0) {
+            $("#load").fadeOut('slow');
+        }
+    });
+});
+
+$(function (){
+    $(".tr-sofa").slice(0, 3).show();
+    $("#loadMore3").on('click', function (e) {
+        e.preventDefault();
+        $(".tr-sofa:hidden").slice(0, 2).slideDown();
+        if ($(".tr-sofa:hidden").length == 0) {
+            $("#load").fadeOut('slow');
+        }
+    });
+});
+
+$(function (){
+    $(".tr-armchair").slice(0, 3).show();
+    $("#loadMore4").on('click', function (e) {
+        e.preventDefault();
+        $(".tr-armchair:hidden").slice(0, 2).slideDown();
+        if ($(".tr-armchair:hidden").length == 0) {
+            $("#load").fadeOut('slow');
+        }
+    });
+});
+
+$(function (){
+    $(".tr-bookshelf").slice(0, 3).show();
+    $("#loadMore5").on('click', function (e) {
+        e.preventDefault();
+        $(".tr-bookshelf:hidden").slice(0, 2).slideDown();
+        if ($(".tr-bookshelf:hidden").length == 0) {
+            $("#load").fadeOut('slow');
+        }
+    });
+});
+
+$(function (){
+    $(".tr-tv").slice(0, 3).show();
+    $("#loadMore6").on('click', function (e) {
+        e.preventDefault();
+        $(".tr-tv:hidden").slice(0, 2).slideDown();
+        if ($(".tr-tv:hidden").length == 0) {
             $("#load").fadeOut('slow');
         }
     });
