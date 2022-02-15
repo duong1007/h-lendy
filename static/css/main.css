@@ -408,6 +408,11 @@ table {
     fill: #C75000;
 }
 
+.added span, .added svg g path {
+    color: #C75000 !important;
+    fill: #C75000 !important;
+}
+
 .product-icon button {
     border: 0;
     background: none;

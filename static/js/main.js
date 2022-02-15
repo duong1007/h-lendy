@@ -41,9 +41,13 @@ function rotate(data) {
     )
 }
 
-// $(".add-cart").click(function () {
-//     $(".span-add");
-// })
+function addToCart(id) {
+    let newId = "button#" + id + "> span.span-add"
+    $(newId).text('done')
+    $("button#" + id).addClass('added')
+    let numP = document.getElementById("num-product")
+    numP.innerHTML = numP.textContent*1 + 1
+}
 
 // range slider
 $( function() {
