@@ -47,7 +47,7 @@ function addToCart(id) {
     $("button#" + id).addClass('added')
     let numP = document.getElementById("num-product")
     numP.innerHTML = numP.textContent*1 + 1
-    $("button#" + id).attr('disabled','disabled')
+    // $("button#" + id).attr('disabled','disabled')
 }
 
 // range slider
