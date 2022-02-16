@@ -247,6 +247,10 @@ a {
         padding-left: 0;
         text-align: center;
     }
+
+    .loadMore {
+        left: 27% !important;
+    }
 }
 
 @media screen and (max-width: 514px) {
