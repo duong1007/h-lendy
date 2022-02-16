@@ -47,6 +47,7 @@ function addToCart(id) {
     $("button#" + id).addClass('added')
     let numP = document.getElementById("num-product")
     numP.innerHTML = numP.textContent*1 + 1
+    $("button#" + id).attr('disabled','disabled')
 }
 
 // range slider
@@ -66,66 +67,66 @@ $( function() {
 
 //load-more
 $(function () {
-    $(".tr-product").slice(0, 3).show();
+    $(".td-product").slice(0, 4).show();
     $("#loadMore1").on('click', function (e) {
         e.preventDefault();
-        $(".tr-product:hidden").slice(0, 2).slideDown();
-        if ($(".tr-product:hidden").length == 0) {
+        $(".td-product:hidden").slice(0, 2).slideDown();
+        if ($(".td-product:hidden").length == 0) {
             $("#load").fadeOut('slow');
         }
     });
 });
 
 $(function (){
-    $(".tr-coffe").slice(0, 3).show();
+    $(".td-coffe").slice(0, 4).show();
     $("#loadMore2").on('click', function (e) {
         e.preventDefault();
-        $(".tr-coffe:hidden").slice(0, 2).slideDown();
-        if ($(".tr-coffe:hidden").length == 0) {
+        $(".td-coffe:hidden").slice(0, 2).slideDown();
+        if ($(".td-coffe:hidden").length == 0) {
             $("#load").fadeOut('slow');
         }
     });
 });
 
 $(function (){
-    $(".tr-sofa").slice(0, 3).show();
+    $(".td-sofa").slice(0, 4).show();
     $("#loadMore3").on('click', function (e) {
         e.preventDefault();
-        $(".tr-sofa:hidden").slice(0, 2).slideDown();
-        if ($(".tr-sofa:hidden").length == 0) {
+        $(".td-sofa:hidden").slice(0, 2).slideDown();
+        if ($(".td-sofa:hidden").length == 0) {
             $("#load").fadeOut('slow');
         }
     });
 });
 
 $(function (){
-    $(".tr-armchair").slice(0, 3).show();
+    $(".td-armchair").slice(0, 4).show();
     $("#loadMore4").on('click', function (e) {
         e.preventDefault();
-        $(".tr-armchair:hidden").slice(0, 2).slideDown();
-        if ($(".tr-armchair:hidden").length == 0) {
+        $(".td-armchair:hidden").slice(0, 2).slideDown();
+        if ($(".td-armchair:hidden").length == 0) {
             $("#load").fadeOut('slow');
         }
     });
 });
 
 $(function (){
-    $(".tr-bookshelf").slice(0, 3).show();
+    $(".td-bookshelf").slice(0, 4).show();
     $("#loadMore5").on('click', function (e) {
         e.preventDefault();
-        $(".tr-bookshelf:hidden").slice(0, 2).slideDown();
-        if ($(".tr-bookshelf:hidden").length == 0) {
+        $(".td-bookshelf:hidden").slice(0, 2).slideDown();
+        if ($(".td-bookshelf:hidden").length == 0) {
             $("#load").fadeOut('slow');
         }
     });
 });
 
 $(function (){
-    $(".tr-tv").slice(0, 3).show();
+    $(".td-tv").slice(0, 4).show();
     $("#loadMore6").on('click', function (e) {
         e.preventDefault();
-        $(".tr-tv:hidden").slice(0, 2).slideDown();
-        if ($(".tr-tv:hidden").length == 0) {
+        $(".td-tv:hidden").slice(0, 2).slideDown();
+        if ($(".td-tv:hidden").length == 0) {
             $("#load").fadeOut('slow');
         }
     });

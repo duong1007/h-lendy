@@ -233,8 +233,8 @@ a {
 }
 
 @media screen and (min-width: 1500px) {
-    .category {
-        width: 20%;
+    .category-living {
+        width: 20% !important;
     }
 }
 
@@ -380,7 +380,7 @@ table {
     text-decoration: gray;
 }
 
-.td-product {
+.td-product, .td-armchair, .td-tv, .td-bookshelf, .td-coffe, .td-sofa {
     padding-right: 12px !important;
     color: white;
     padding-top: 0;
@@ -401,6 +401,10 @@ table {
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s;
+}
+
+.td-armchair, .td-bookshelf, .td-coffe, .td-product,.td-sofa, .td-tv {
+    display: none;
 }
 
 .add-cart:hover span, .add-cart:hover svg g path {
@@ -552,7 +556,7 @@ table {
     position: absolute;
     padding: 0.5rem 2rem;
     margin: 2rem;
-    left: 44%;
+    left: 41%;
     bottom: -55px;
     transition: all 600ms ease-in-out;
     -webkit-transition: all 600ms ease-in-out;
