@@ -67,6 +67,12 @@ body::-webkit-scrollbar {
     margin: 8px;
 }
 
+@media screen and (max-width: 878px) {
+    .nav-li {
+        width: auto;
+    }
+}
+
 .nav-collapse {
     background: #C75000;
     color: white;
@@ -383,9 +389,19 @@ table {
 .discount {
     font-size: 20px;
     position: absolute;
-    top: 4%;
-    left: 5%;
+    top: 5%;
+    left: 6%;
     background: #C75000;
+    border-radius: 0;
+}
+
+.sold-out {
+    font-size: 16px;
+    padding: 10px;
+    position: absolute;
+    top: 5%;
+    left: 6%;
+    background: grey;
     border-radius: 0;
 }
 
