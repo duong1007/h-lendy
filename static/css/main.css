@@ -22,14 +22,8 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.col-custom {
-    flex: 0 0 auto;
-    width: 3.5%;
-}
-
-.col-custom-2 {
-    flex: 0 0 auto;
-    width: 19%;
+.ms-custom {
+    margin-left: 2.2rem;
 }
 
 .nav-input {
@@ -238,6 +232,28 @@ a {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .product-category {
+        padding: 0 2rem 3rem 2rem;
+    }
+
+    .breadcrumb__links {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 514px) {
+    .room-page {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    #myTab li {
+        transform: translateX(20%);
+    }
+}
+
 .category:hover .img-top {
     visibility: hidden;
     opacity: 0;
@@ -315,6 +331,7 @@ a {
 
 .product-category {
     padding-left: 4rem;
+    padding-bottom: 2rem;
 }
 
 /* On mouse-over */
@@ -403,7 +420,7 @@ table {
     transition: all 0.5s;
 }
 
-.td-armchair, .td-bookshelf, .td-coffe, .td-product,.td-sofa, .td-tv {
+.td-armchair, .td-bookshelf, .td-coffe, .td-product, .td-sofa, .td-tv {
     display: none;
 }
 
@@ -510,11 +527,11 @@ table {
 }
 
 #amount {
-    background: black;
     border: 0;
     color: white;
     margin-bottom: 1rem;
     text-align: center;
+    width: 93%;
 }
 
 .ui-state-active {
