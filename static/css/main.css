@@ -53,7 +53,7 @@ body::-webkit-scrollbar {
 }
 
 .bg-black {
-    background: black;
+    background: black !important;
 }
 
 .nav-li:focus, .nav-li:hover, .nav-li.active {

@@ -1,0 +1,50 @@
+
+body {
+    height: 1vh;
+    background-color: black;
+}
+
+.breadcrumb-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: gray;
+}
+.breadcrumb-links span {
+    color: gray;
+}
+
+.breadcrumb-links a:hover {
+    color: white;
+}
+
+.table {
+    color: white;
+}
+
+.table thead {
+    border-top: 2px gray solid;
+    border-bottom: 2px gray solid;
+}
+
+.table tbody tr {
+    border-bottom: 1px gray solid;
+}
+
+.cart-product {
+    width: 90%;
+    margin-left: 2%;
+}
+
+.p-title {
+    margin-left: 10%;
+    margin-bottom: 0;
+}
+
+.table tbody th {
+    width: 50%;
+    vertical-align: middle;
+}
+
+.table td {
+    vertical-align: middle;
+}

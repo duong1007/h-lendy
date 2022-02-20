@@ -32,7 +32,7 @@ form {
     color: gray;
     background-color: black;
     border: 2px gainsboro solid;
-    border-radius: 8px;
+    border-radius: 0;
     height: 150%;
 }
 
@@ -40,7 +40,7 @@ form .sign {
     color: white;
     text-align: center;
     background-color: #C75000;
-    border-radius: 8px;
+    border-radius: 0;
     border: 2px solid #C75000;
     /*border: none;*/
     margin: 2% 0;
@@ -87,7 +87,7 @@ hr {
     background-color: transparent;
     border: 2px solid gainsboro;
     color: white;
-    border-radius: 8px;
+    border-radius: 0;
 }
 
 .sign-up-social:hover {
@@ -123,5 +123,6 @@ hr {
 
 .sign-up:hover {
     background-color: transparent !important;
+    color: #0dcaf0 !important;
 }
 
