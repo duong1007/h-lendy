@@ -1,0 +1,127 @@
+.sign-right {
+    padding: 0;
+}
+
+.sign-right img {
+    width: 100%;
+    height: 100%;
+}
+
+.sign-left {
+    background-color: black;
+}
+
+.logo {
+    transform: translateX(50%);
+    width: 50%;
+    margin: 10% 0;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10%;
+}
+
+form {
+    margin: 0 10%;
+}
+
+.form-control {
+    color: gray;
+    background-color: black;
+    border: 2px gainsboro solid;
+    border-radius: 8px;
+    height: 150%;
+}
+
+form .sign {
+    color: white;
+    text-align: center;
+    background-color: #C75000;
+    border-radius: 8px;
+    border: 2px solid #C75000;
+    /*border: none;*/
+    margin: 2% 0;
+    padding: 0 !important;
+    width: 100%;
+}
+
+form .sign:hover {
+    background-color: transparent;
+    color: #C75000;
+}
+
+form .sign p {
+    padding: 0;
+    margin: 2% 0;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+label {
+    margin-bottom: 7%;
+}
+
+hr {
+    color: gainsboro;
+    border: 1px gainsboro solid;
+
+}
+
+.hr-text {
+    color: grey;
+    transform: translateY(10%);
+    padding: 0;
+}
+
+.btnText {
+    text-align: center;
+    font-weight: bold;
+    margin-right: 10%;
+}
+
+.sign-up-social {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid gainsboro;
+    color: white;
+    border-radius: 8px;
+}
+
+.sign-up-social:hover {
+    border-color: #C75000;
+}
+
+.sign-up-social img {
+    margin: 3% 10% 3% 0;
+}
+
+.link {
+    text-align: center;
+    margin: 10% 0;
+    color:white;
+}
+
+.link a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0dcaf0;
+}
+
+.forgot {
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.sign-up {
+    background-color: #0dcaf0 !important;
+    border: 2px solid #0dcaf0 !important;
+}
+
+.sign-up:hover {
+    background-color: transparent !important;
+}
+
