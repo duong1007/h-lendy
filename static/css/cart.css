@@ -32,6 +32,8 @@ body {
 }
 
 .cart-product {
+    background-color: #CCCCCC;
+    padding: 4% 2%;
     width: 80%;
     margin-left: 8%;
 }
