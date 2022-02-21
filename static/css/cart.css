@@ -19,8 +19,6 @@ body {
 
 .table {
     color: white;
-    margin-bottom: 5rem;
-    padding-bottom: 5rem;
 }
 
 .table thead {
@@ -106,3 +104,16 @@ body {
 .nav-li {
     border-bottom: black 4px solid;
 }
+
+.continue a:hover {
+    border: #C75000 1px solid;
+    color: #C75000;
+    background-color: transparent;
+}
+
+.continue a {
+    color: white;
+    background-color: #C75000;
+}
+
+

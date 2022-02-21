@@ -83,6 +83,10 @@ body::-webkit-scrollbar {
     margin-top: 1rem;
 }
 
+.search {
+    margin-right: 1rem;
+}
+
 .search span {
     color: white;
     margin: 0;
