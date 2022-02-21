@@ -51,7 +51,7 @@
                                    aria-expanded="false" aria-controls="products">PRODUCT</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link nav-li active " data-bs-toggle="collapse" href="#rooms" role="button"
+                                <a class="nav-link nav-li" data-bs-toggle="collapse" href="#rooms" role="button"
                                    aria-expanded="false" aria-controls="rooms">ROOMS</a>
                             </li>
                             <li class="nav-item">
@@ -66,8 +66,15 @@
                             </label>
                             <a href=""><span class="material-icons me-2">favorite_border</span></a>
                             <a href="cart.html" class="position-relative">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="svg-custom" width="26" height="26" viewBox="0 0 24 24"><title>shopping_bag</title><g fill="none"><path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z" fill="#FFFF"></path></g></svg>
-                                <span class="position-absolute badge badge-shop rounded-circle" id="num-product">4</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="svg-custom" width="26" height="26"
+                                     viewBox="0 0 24 24"><title>shopping_bag</title>
+                                    <g fill="none">
+                                        <path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"
+                                              fill="#FFFF"></path>
+                                    </g>
+                                </svg>
+                                <span class="position-absolute badge badge-shop rounded-circle"
+                                      id="num-product">4</span>
                             </a>
                         </form>
                     </div>
@@ -137,7 +144,8 @@
                                             <div class="col-md-3">
                                                 <a href="products/storage.html">
                                                     <div class="card">
-                                                        <img src="../static/image/products/storage.png" class="img-fluid"
+                                                        <img src="../static/image/products/storage.png"
+                                                             class="img-fluid"
                                                              alt="">
                                                         <div class="card-body">
                                                             <p class="card-title">Storage</p>
@@ -164,7 +172,7 @@
                         </div>
                     </div>
                     <div class="collapse nav-collapse navbar-collapse" id="rooms" data-bs-parent="#myCollapse">
-                        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false">
+                        <div id="carouselExampleInterval" class="carousel">
                             <div class="row">
                                 <div class="col-1">
                                 </div>
@@ -174,7 +182,8 @@
                                             <div class="col-md-3">
                                                 <a href="rooms/home-office.html">
                                                     <div class="card">
-                                                        <img src="../static/image/rooms/home%20office.png" class="img-fluid"
+                                                        <img src="../static/image/rooms/home%20office.png"
+                                                             class="img-fluid"
                                                              alt="">
                                                         <div class="card-body">
                                                             <p class="card-title">Home Office</p>
@@ -187,7 +196,8 @@
                                             <div class="col-md-3">
                                                 <a href="rooms/living-room.html">
                                                     <div class="card">
-                                                        <img src="../static/image/rooms/living%20room.png" class="img-fluid"
+                                                        <img src="../static/image/rooms/living%20room.png"
+                                                             class="img-fluid"
                                                              alt="">
                                                         <div class="card-body">
                                                             <p class="card-title">Living Room</p>
@@ -200,7 +210,8 @@
                                             <div class="col-md-3">
                                                 <a href="rooms/bedroom.html">
                                                     <div class="card">
-                                                        <img src="../static/image/rooms/bedroom.png" class="img-fluid" alt="">
+                                                        <img src="../static/image/rooms/bedroom.png" class="img-fluid"
+                                                             alt="">
                                                         <div class="card-body">
                                                             <p class="card-title">BedRoom</p>
                                                         </div>
@@ -212,7 +223,8 @@
                                             <div class="col-md-3">
                                                 <a href="rooms/dining-room.html">
                                                     <div class="card">
-                                                        <img src="../static/image/rooms/dining%20room.png" class="img-fluid"
+                                                        <img src="../static/image/rooms/dining%20room.png"
+                                                             class="img-fluid"
                                                              alt="">
                                                         <div class="card-body">
                                                             <p class="card-title">Dining Room</p>
@@ -256,20 +268,80 @@
         <tr role="alert" class="alert fade show">
             <th scope="row">
                 <div class="row">
-                    <div class="col-6">
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
-                        <img src="../static/image/sofas/sofa-1.png" class="cart-product" alt="sofa">
+                    <div class="col-4">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"
+                                aria-label="Close"></button>
+                        <img src="../static/image/sofas/sofa-2.png" class="cart-product" alt="sofa">
                     </div>
-                    <div class="col-5">
+                    <div class="col-4 test">
                         <p class="p-name">MODENA 2,5 SEATER
                         </p>
-                        <p class="p-color">Color: Gray <span class="material-icons float-end">fiber_manual_record</span></p>
+                        <p class="p-color">Color: Gray <span class="material-icons icon-round" style="color: gray">fiber_manual_record</span>
+                        </p>
                     </div>
                 </div>
             </th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td><b>$1,868</b></td>
+            <td>
+                <div class="number-input btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="remove"><span class="material-icons">remove</span></button>
+                    <input type="text" value="1" disabled>
+                    <button type="button" class="add"><span class="material-icons">add</span></button>
+                </div>
+            </td>
+            <td class="subtotal">$1,868</td>
+        </tr>
+        <tr role="alert" class="alert fade show">
+            <th scope="row">
+                <div class="row">
+                    <div class="col-4">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"
+                                aria-label="Close"></button>
+                        <img src="../static/image/tables/table-8.png" class="cart-product" alt="sofa">
+                    </div>
+                    <div class="col-4 test">
+                        <p class="p-name">KINGSTON TABLE
+                        </p>
+                        <p class="p-color">Color: White <span class="material-icons icon-round" style="color: white">fiber_manual_record</span>
+                        </p>
+                    </div>
+                </div>
+            </th>
+            <td><b>$1,249</b></td>
+            <td>
+                <div class="number-input btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="remove"><span class="material-icons">remove</span></button>
+                    <input type="text" value="1" disabled>
+                    <button type="button" class="add"><span class="material-icons">add</span></button>
+                </div>
+            </td>
+            <td class="subtotal">$1,249</td>
+        </tr>
+        <tr role="alert" class="alert fade show">
+            <th scope="row">
+                <div class="row">
+                    <div class="col-4">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"
+                                aria-label="Close"></button>
+                        <img src="../static/image/armchairs/armchair-5.png" class="cart-product" alt="sofa">
+                    </div>
+                    <div class="col-4 test">
+                        <p class="p-name">CARMO CHAIR
+                        </p>
+                        <p class="p-color">Color: Gray <span class="material-icons icon-round" style="color: gray">fiber_manual_record</span>
+                        </p>
+                    </div>
+                </div>
+            </th>
+            <td><b>$1,580</b></td>
+            <td>
+                <div class="number-input btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="remove"><span class="material-icons">remove</span></button>
+                    <input type="text" value="1" disabled>
+                    <button type="button" class="add"><span class="material-icons">add</span></button>
+                </div>
+            </td>
+            <td class="subtotal">$1,580</td>
         </tr>
         </tbody>
     </table>

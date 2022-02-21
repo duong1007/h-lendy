@@ -1,11 +1,10 @@
-
 // carousel
 let items = document.querySelectorAll('.carousel .carousel-item')
 
 items.forEach((el) => {
     const minPerSlide = 4
     let next = el.nextElementSibling
-    for (var i=1; i<minPerSlide; i++) {
+    for (var i = 1; i < minPerSlide; i++) {
         if (!next) {
             // wrap carousel by using first child
             next = items[0]
@@ -17,9 +16,9 @@ items.forEach((el) => {
 })
 
 // dropdown-btn
-$('.dropdown-btn').on('click',function(){
+$('.dropdown-btn').on('click', function () {
 
-    if ($(this).find('span').hasClass('rotate')){
+    if ($(this).find('span').hasClass('rotate')) {
         $(this).find('span').removeClass('rotate');
         $(this).find('span').addClass('rotate-revert');
     } else {
@@ -32,7 +31,7 @@ function rotate(data) {
     let element = document.getElementById(data)
     setTimeout(
         function () {
-            if(element.textContent.includes('add')) {
+            if (element.textContent.includes('add')) {
                 element.innerHTML = 'remove'
             } else {
                 element.innerHTML = 'add'
@@ -46,24 +45,24 @@ function addToCart(id) {
     $(newId).text('done')
     $("button#" + id).addClass('added')
     let numP = document.getElementById("num-product")
-    numP.innerHTML = numP.textContent*1 + 1
+    numP.innerHTML = numP.textContent * 1 + 1
     // $("button#" + id).attr('disabled','disabled')
 }
 
 // range slider
-$( function() {
-    $( "#slider-range" ).slider({
+$(function () {
+    $("#slider-range").slider({
         range: true,
         min: 0,
         max: 5000,
-        values: [ 750, 3000 ],
-        slide: function( event, ui ) {
-            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        values: [750, 3000],
+        slide: function (event, ui) {
+            $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
         }
     });
-    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-} );
+    $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+        " - $" + $("#slider-range").slider("values", 1));
+});
 
 //load-more
 $(function () {
@@ -77,7 +76,7 @@ $(function () {
     });
 });
 
-$(function (){
+$(function () {
     $(".td-coffe").slice(0, 4).show();
     $("#loadMore2").on('click', function (e) {
         e.preventDefault();
@@ -88,7 +87,7 @@ $(function (){
     });
 });
 
-$(function (){
+$(function () {
     $(".td-sofa").slice(0, 4).show();
     $("#loadMore3").on('click', function (e) {
         e.preventDefault();
@@ -99,7 +98,7 @@ $(function (){
     });
 });
 
-$(function (){
+$(function () {
     $(".td-armchair").slice(0, 4).show();
     $("#loadMore4").on('click', function (e) {
         e.preventDefault();
@@ -110,7 +109,7 @@ $(function (){
     });
 });
 
-$(function (){
+$(function () {
     $(".td-bookshelf").slice(0, 4).show();
     $("#loadMore5").on('click', function (e) {
         e.preventDefault();
@@ -121,7 +120,7 @@ $(function (){
     });
 });
 
-$(function (){
+$(function () {
     $(".td-tv").slice(0, 4).show();
     $("#loadMore6").on('click', function (e) {
         e.preventDefault();
@@ -139,3 +138,30 @@ $(window).scroll(function () {
         $('.totop a').fadeOut();
     }
 });
+
+$('.remove').on('click',function () {
+    let button = $(this)
+    let oldValue = button.parent().find(
+        'input'
+    ).val();
+
+    let newVal
+    if (oldValue > 0) {
+        newVal = parseFloat(oldValue) - 1;
+    } else {
+        newVal = 0;
+    }
+
+    button.parent().find("input").val(newVal);
+})
+
+$('.add').on('click', function () {
+    let button = $(this)
+    let oldValue = button.parent().find(
+        'input'
+    ).val()
+
+    let newVal = parseFloat(oldValue) + 1;
+
+    button.parent().find("input").val(newVal);
+})

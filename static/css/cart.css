@@ -1,6 +1,6 @@
 
 body {
-    height: 1vh;
+    height: 1000px;
     background-color: black;
 }
 
@@ -19,11 +19,14 @@ body {
 
 .table {
     color: white;
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
 }
 
 .table thead {
     border-top: 2px gray solid;
     border-bottom: 2px gray solid;
+    text-align: center;
 }
 
 .table tbody tr {
@@ -31,20 +34,75 @@ body {
 }
 
 .cart-product {
-    width: 90%;
-    margin-left: 2%;
+    width: 80%;
+    margin-left: 8%;
 }
 
 .p-title {
-    margin-left: 10%;
+    width: 35%;
     margin-bottom: 0;
 }
 
 .table tbody th {
-    width: 50%;
+    width: 70%;
     vertical-align: middle;
 }
 
 .table td {
+    width: 10%;
     vertical-align: middle;
+    text-align: center;
+}
+
+.p-name {
+    margin-top:15%;
+    color: #C75000;
+    font-weight: bold;
+}
+
+.p-color {
+    width: 50%;
+}
+
+.icon-round {
+    margin-left: 0.5rem;
+    transform: translateY(26%);
+}
+
+.number-input {
+    transform: translateX(10%);
+}
+
+.number-input input {
+    width: 30%;
+    border: #C75000 1px solid;
+    text-align: center;
+}
+
+.number-input button {
+    width: 30%;
+    background-color: white;
+    padding: 0;
+    border: #C75000 1px solid;
+    font-weight: bold;
+}
+
+.number-input input {
+    background-color: white;
+    font-weight: bold;
+}
+
+
+.number-input span {
+    padding: 0;
+    transform: translateY(16%);
+}
+
+.subtotal {
+    font-weight: bold;
+    color: #C75000;
+}
+
+.nav-li {
+    border-bottom: black 4px solid;
 }
