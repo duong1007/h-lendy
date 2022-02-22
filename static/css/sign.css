@@ -11,7 +11,7 @@
     background-color: black;
 }
 
-.logo {
+.logo-sign {
     transform: translateX(50%);
     width: 50%;
     margin: 10% 0;
@@ -34,6 +34,19 @@ form {
     border: 2px gainsboro solid;
     border-radius: 0;
     height: 150%;
+}
+
+.form-select {
+    color: gray;
+    background-color: black;
+    border: 2px gainsboro solid;
+    border-radius: 0;
+    height: 130%;
+    background-image: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 5 16' fill='gray' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") !important;
+}
+
+.form-select:focus {
+    background-color: white;
 }
 
 form .sign {
@@ -60,7 +73,7 @@ form .sign p {
     font-size: 25px;
 }
 
-label {
+.label-custom {
     margin-bottom: 7%;
 }
 

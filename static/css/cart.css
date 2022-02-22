@@ -1,6 +1,6 @@
 
 body {
-    height: 1000px;
+    height: 1200px;
     background-color: black;
 }
 
@@ -116,6 +116,132 @@ body {
 .continue a {
     color: white;
     background-color: #C75000;
+}
+
+.payment-1-title {
+    margin: 3% 0;
+    padding: 0;
+}
+
+.fc-custom input {
+    background: black;
+    border: 1px solid gray;
+    width: 3%;
+    height: 95%;
+    margin-top: 0;
+    margin-right: 10px;
+}
+
+.fc-custom input:checked {
+    background: #C75000;
+}
+
+.fc-custom {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 5% !important;
+}
+
+textarea {
+    width: 100%;
+    color: gray;
+    background-color: black;
+    border: 2px gainsboro solid;
+    border-radius: 0;
+    resize: none;
+    margin-bottom: 2%;
+}
+
+.order-summary {
+    border: #C75000 1px solid;
+}
+
+.order-product {
+    width: 100%;
+    background: #CCCCCC;
+    padding: 2% 2%;
+}
+
+.mgt-5 {
+    margin-top: 5%;
+}
+
+.order-product-name {
+    margin-top: 10%;
+    color: #C75000;
+    font-weight: bold;
+}
+
+.input-discount  {
+    width: 75%;
+    background: black;
+    color: gray;
+    border: 1px #C75000 solid;
+    border-radius: 0;
+    font-size: 20px;
+    padding: 2% 0 2% 5% ;
+}
+
+.btn-discount {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    background: #C75000;
+    border-radius: 0;
+    color: white;
+
+}
+
+.delivery {
+    border: 1px gray solid;
+}
+
+.payment-2-title {
+    color: gray;
+    margin-top: 2%;
+}
+
+.method {
+    border: 3px white solid;
+    border-right: 0;
+}
+
+.method-icon {
+    border: 3px #C75000 solid;
+    border-left: 0;
+}
+
+.img-pay {
+    width: 46%;
+    transform: translate(65%,45%);
+}
+
+.img-check {
+    width: 46%;
+    transform: translate(65%,80%);
+}
+
+.method-label {
+    margin: 10%  5%;
+    font-weight: bold;
+}
+
+.method-input {
+    width: 5%;
+    height: 83%;
+    margin-top: 0 ;
+    margin-right: 4%;
+    background: black;
+    border: 1px solid white ;
+}
+
+.method-input:checked {
+    background: #C75000;
+    border: 1px solid white;
+}
+
+.method-icon {
+    background: #C75000;
 }
 
 
