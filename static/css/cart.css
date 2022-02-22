@@ -221,6 +221,12 @@ textarea {
     transform: translate(65%,80%);
 }
 
+.setup {
+    top: 80%;
+    left: 33%;
+}
+
+
 .method-label {
     margin: 10%  5%;
     font-weight: bold;
