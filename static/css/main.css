@@ -47,6 +47,7 @@ body::-webkit-scrollbar {
 
 .logo {
     height: auto;
+    margin: 0 3rem;
 }
 
 .ms-10 {
@@ -82,10 +83,6 @@ body::-webkit-scrollbar {
 .nav-collapse img {
     width: 100%;
     margin-top: 1rem;
-}
-
-.search {
-    margin-right: 1rem;
 }
 
 .search span {
@@ -256,6 +253,18 @@ a {
     .loadMore {
         left: 20% !important;
     }
+
+}
+
+@media screen and (max-width: 1000px){
+    .search {
+        margin: 8px ;
+        width: 100% ;
+    }
+
+    .navbar-label {
+        width: 100%;
+    }
 }
 
 
@@ -287,18 +296,23 @@ a {
         padding-left: 2rem !important;
     }
 
-    .navbar-label {
-        width: 100%;
+    .product {
+        border: #C75000 1px solid !important;
+        margin-bottom: 5% !important;
     }
+
 
     .search {
         margin: 8px !important;
         width: 100% !important;
     }
 
-    .product {
-        border: #C75000 1px solid !important;
-        margin-bottom: 5% !important;
+    .navbar-label {
+        width: 100%;
+    }
+
+    .logo {
+        margin-left: 16px !important;
     }
 }
 
