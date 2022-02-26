@@ -4,6 +4,7 @@ body {
     overflow-x: hidden;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+    background: black;
 }
 
 .badge-shop {
@@ -253,8 +254,17 @@ a {
     }
 
     .loadMore {
-        left: 27% !important;
+        left: 20% !important;
     }
+}
+
+
+
+@media screen and (width: 514px) {
+    #myTab li {
+        transform: translateX(20%);
+    }
+
 }
 
 @media screen and (max-width: 514px) {
@@ -263,8 +273,32 @@ a {
         text-align: center;
     }
 
-    #myTab li {
-        transform: translateX(20%);
+    .main-banner  p {
+        display: none;
+    }
+
+    .w-custom {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+
+    .product-category {
+        padding-left: 2rem !important;
+    }
+
+    .navbar-label {
+        width: 100%;
+    }
+
+    .search {
+        margin: 8px !important;
+        width: 100% !important;
+    }
+
+    .product {
+        border: #C75000 1px solid !important;
+        margin-bottom: 5% !important;
     }
 }
 
@@ -375,6 +409,7 @@ table {
 
 .w-custom {
     width: 98%;
+    margin-left: 1.5rem;
 }
 
 .card-title {
@@ -592,13 +627,13 @@ table {
 
 .loadMore {
     text-align: center;
-    background-color: #C75000;
-    color: white;
+    background-color: black;
+    color: #C75000;
     position: absolute;
-    padding: 0.5rem 2rem;
-    margin: 2rem;
     left: 41%;
     bottom: -55px;
+    padding: 0.5rem 2rem;
+    margin: 2rem;
     transition: all 600ms ease-in-out;
     -webkit-transition: all 600ms ease-in-out;
     -moz-transition: all 600ms ease-in-out;
@@ -606,8 +641,7 @@ table {
 }
 
 .loadMore:hover {
-    background-color: white;
-    color: black;
+    color: white;
 }
 
 .loadMore span {

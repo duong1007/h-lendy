@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 
 </head>
-<body>
+<body style="background: black">
 <!-- Header Begin -->
 <header>
     <div class="container-fluid">
@@ -162,9 +162,8 @@
                             </button>
                         </div>
                     </div>
-                    <div></div>
                     <div class="collapse nav-collapse navbar-collapse" id="rooms" data-bs-parent="#myCollapse">
-                        <div id="carouselExampleInterval" class="carousel">
+                        <div id="carouselExampleInterval" class="carousel slide"  data-bs-ride="carousel">
                             <div class="row">
                                 <div class="col-1">
                                 </div>
@@ -226,6 +225,16 @@
                                 <div class="col-1">
                                 </div>
                             </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                                    data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                                    data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -563,7 +572,7 @@
                     </div>
                 </div>
                 <div class="position-relative">
-                    <a href="#" id="loadMore1" class="loadMore">View More <span class="material-icons">visibility</span></a>
+                    <a href="#" id="loadMore1" class="loadMore">View More <span class="material-icons">keyboard_double_arrow_down</span></a>
                 </div>
             </div>
             <div class="tab-pane fade" id="coffe-table" role="tabpanel" aria-labelledby="coffe-table-tab">
@@ -684,7 +693,7 @@
                     </div>
                 </div>
                 <div class="position-relative">
-                    <a href="#" id="loadMore2" class="loadMore">View More <span class="material-icons">visibility</span></a>
+                    <a href="#" id="loadMore2" class="loadMore">View More <span class="material-icons">keyboard_double_arrow_down</span></a>
                 </div>
             </div>
             <div class="tab-pane fade" id="sofa" role="tabpanel" aria-labelledby="sofa-tab">
@@ -748,7 +757,7 @@
                     </div>
                 </div>
                 <div class="position-relative">
-                    <a href="#" id="loadMore3" class="loadMore">View More <span class="material-icons">visibility</span></a>
+                    <a href="#" id="loadMore3" class="loadMore">View More <span class="material-icons">keyboard_double_arrow_down</span></a>
                 </div>
             </div>
             <p class="totop">
